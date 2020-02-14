@@ -6,20 +6,26 @@ function Price(props) {
   }
   const colorCode = (value) => {
     if (value > 7.5) {
-      return 'red';
-    } else if (value >= 5) {
-      return 'yellow';
+      return '#ffaf8f';
+    } else if (value > 5) {
+      return '#f4ff8f';
     } else {
-      return 'green';
+      return '#8fffad';
     }
   }
   const priceStyles = {
     backgroundColor: colorCode(props.price),
-
-  }
+    textAlign: 'center',
+    padding: '20px'
+  };
+  const priceTextStyle = {
+    margin: '0',
+  };
   return (
     <div style={priceStyles}>
-      {`$${makeMoney(props.price)}`}
+      <h3 style={priceTextStyle}>
+        {`$${makeMoney(props.price)}`}
+      </h3>
     </div>
   );
 }

@@ -6,16 +6,17 @@ import KegTop from './KegTop';
 function Keg(props) {
   const checkIfLow = (employee, number) => {
     if (employee && number < 10) {
-      return '3px solid red';
+      return '2px solid red';
     } else {
-      return '1px solid darkgrey';
+      return '2px solid #212121';
     }
   }
   const kegStyle = {
     width: '40%',
     border: checkIfLow(props.employee, props.keg.pints),
     borderRadius: '5px',
-    margin: '10px'
+    margin: '10px',
+    backgroundColor: 'white'
   };
   return (
     <div style={kegStyle}>
