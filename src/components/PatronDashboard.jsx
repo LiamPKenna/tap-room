@@ -3,7 +3,9 @@ import Menu from './Menu';
 
 function EmployeeDashboard() {
   return (
-    <Menu />
+    <div>
+      <Menu employee={false} />
+    </div>
   );
 }
 
