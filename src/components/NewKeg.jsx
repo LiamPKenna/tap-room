@@ -15,27 +15,27 @@ function NewKeg() {
   return (
     <div style={formStyle}>
       <form action="">
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="name">Beer Name</InputLabel>
           <Input id="name" />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="brand">Brand</InputLabel>
           <Input id="brand" />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="abv">ABV</InputLabel>
           <Input id="abv" />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="price">Beer Price</InputLabel>
           <Input id="price" />
           <br/>
         </FormControl>
-        <Button variant="contained" type="submit" fullWidth='true'>SUBMIT</Button>
+        <Button variant="contained" type="submit" fullWidth>SUBMIT</Button>
       </form>
     </div>
   );
