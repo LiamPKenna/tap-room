@@ -22,7 +22,8 @@ function Counter(props) {
     fontSize: '18px'
   };
   const btnStyle = {
-    margin: '10px'
+    margin: '10px',
+    backgroundColor: (props.pints > 10) ? 'default' : 'red'
   }
   return (
     <div style={counterStyle}>
