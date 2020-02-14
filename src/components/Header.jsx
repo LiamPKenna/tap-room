@@ -11,7 +11,7 @@ function Header() {
   const headerGrid = {
     display: 'grid',
     gridTemplateColumns: '1fr 200px',
-    backgroundColor: 'grey',
+    backgroundColor: '#d1d1d1',
     padding: '10px'
   };
   return (
