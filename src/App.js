@@ -6,7 +6,8 @@ import {
   Route, } from 'react-router-dom';
 import EmployeeDashboard from './components/EmployeeDashboard';
 import PatronDashboard from './components/PatronDashboard';
-import Header from './components/Header'
+import Header from './components/Header';
+import NewKeg from './components/NewKeg';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path='/emp'>
             <EmployeeDashboard/>
+          </Route>
+          <Route path='/new_keg'>
+            <NewKeg/>
           </Route>
         </Switch>
       </div>
