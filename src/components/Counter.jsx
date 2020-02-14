@@ -14,7 +14,8 @@ function Counter(props) {
     gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',
     textAlign: 'center',
     backgroundColor: '#363636',
-    color: 'white'
+    color: 'white',
+    border: '2px solid #d1d1d1'
   };
   const pintsLeftStyle = {
     height: '50px',

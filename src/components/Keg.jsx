@@ -8,15 +8,17 @@ function Keg(props) {
     if (employee && number < 10) {
       return '2px solid red';
     } else {
-      return '2px solid #212121';
+      return '2px solid #3d3d3d';
     }
   }
   const kegStyle = {
     width: '40%',
     border: checkIfLow(props.employee, props.keg.pints),
-    borderRadius: '5px',
+    borderRadius: '10px',
+    overflow: 'hidden',
     margin: '10px',
-    backgroundColor: 'white'
+    backgroundColor: '#fcfcfc',
+    minWidth: '325px'
   };
   return (
     <div style={kegStyle}>
