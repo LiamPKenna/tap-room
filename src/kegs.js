@@ -20,6 +20,20 @@ const kegs = [
     alcoholContent: 5.5,
     pints: 5
   },
+  {
+    name: 'Pliny the Elder',
+    brand: 'Russian River',
+    price: 6.5,
+    alcoholContent: 8,
+    pints: 30
+  },
+  {
+    name: 'Hefeweizen',
+    brand: 'Widmer',
+    price: 5,
+    alcoholContent: 6.2,
+    pints: 105
+  },
 ];
 
 export default kegs;
