@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from './Counter';
 import Price from './Price';
+import KegTop from './KegTop';
 
 function Keg(props) {
   const checkIfLow = (employee, number) => {
@@ -16,26 +17,9 @@ function Keg(props) {
     borderRadius: '5px',
     margin: '10px'
   };
-  const kegTopStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 90px'
-  };
-  const alcoholStyle = {
-    textAlign: 'right',
-    paddingRight: '20px'
-  };
   return (
     <div style={kegStyle}>
-      <div style={kegTopStyle}>
-        <div>
-          <h3>{props.keg.name}</h3>
-          <h4>{props.keg.brand}</h4>
-        </div>
-        <div style={alcoholStyle}>
-          <p>Alcohol:</p>
-          <p>{props.keg.alcoholContent}%</p>
-        </div>
-      </div>
+      <KegTop keg={props.keg}/>
       <Counter pints={props.keg.pints} employee={props.employee} />
       <Price price={props.keg.price} />
     </div>
