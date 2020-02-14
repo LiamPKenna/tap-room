@@ -9,14 +9,14 @@ const kegs = [
   {
     name: 'Warsteiner Premium Verum',
     brand: 'Warsteiner',
-    price: 4.5,
+    price: 4,
     alcoholContent: 4.8,
     pints: 80
   },
   {
     name: 'YSB',
     brand: 'Rogue Ales',
-    price: 5,
+    price: 5.5,
     alcoholContent: 5.5,
     pints: 5
   },
