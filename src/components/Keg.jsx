@@ -24,7 +24,7 @@ function Keg(props) {
     <div style={kegStyle}>
       <KegTop keg={props.keg}/>
       <Counter pints={props.keg.pints} employee={props.employee} />
-      <Price price={props.keg.price} employee={props.employee} />
+      <Price keg={props.keg} employee={props.employee} />
     </div>
   );
 
