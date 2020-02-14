@@ -6,17 +6,24 @@ function Counter(props) {
   
   const checkEmp = () => {    
     if (props.employee) {
-      return (<Button variant="contained">SELL</Button>)
+      return (<Button variant="contained" >SELL</Button>)
     } 
   }
   const counterStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    textAlign: 'center'
+    gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',
+    textAlign: 'center',
+    backgroundColor: 'lightgreen'
+  };
+  const pintsLeftStyle = {
+    height: '40px',
+    paddingTop: '15px'
   };
   return (
     <div style={counterStyle}>
-      <p>{props.pints}</p>
+      <div style={pintsLeftStyle}>
+        {props.pints} pints left
+      </div>
       {checkEmp()}
     </div>
   );
