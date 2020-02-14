@@ -1,10 +1,10 @@
 import React from 'react';
 import KegList from './KegList';
 
-function Menu() {
+function Menu(props) {
   return (
-    
-    <KegList />
+
+    <KegList employee={props.employee} />
   );
 
 }
