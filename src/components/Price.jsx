@@ -18,7 +18,10 @@ function Price(props) {
   const checkEmp = () => {    
     if (props.employee) {
       return (
-        <Link to="/new_keg" keg={props.keg} >
+        <Link to = {{
+          pathname: "/edit_keg",
+          state: {keg: props.keg}
+        }} >
           <div>
             <Button variant="contained" style={btnStyle}>EDIT</Button>
           </div>

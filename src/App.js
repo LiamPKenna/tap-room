@@ -3,11 +3,12 @@ import './App.css';
 import { 
   BrowserRouter as Router,
   Switch,
-  Route, } from 'react-router-dom';
+  Route } from 'react-router-dom';
 import EmployeeDashboard from './components/EmployeeDashboard';
 import PatronDashboard from './components/PatronDashboard';
 import Header from './components/Header';
 import NewKeg from './components/NewKeg';
+import EditKeg from './components/EditKeg';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path='/new_keg'>
             <NewKeg/>
+          </Route>
+          <Route path='/edit_keg'>
+            <EditKeg />
           </Route>
         </Switch>
       </div>
