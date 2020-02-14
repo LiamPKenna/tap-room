@@ -9,9 +9,14 @@ function Counter(props) {
       return (<Button variant="contained">SELL</Button>)
     } 
   }
+  const counterStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    textAlign: 'center'
+  };
   return (
-    <div>
-      <p>counter</p>
+    <div style={counterStyle}>
+      <p>{props.pints}</p>
       {checkEmp()}
     </div>
   );
