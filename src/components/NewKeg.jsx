@@ -5,37 +5,37 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 
 function NewKeg() {
-
+  const formStyle = {
+    margin: '40px auto',
+    backgroundColor: '#fcfcfc',
+    padding: '30px',
+    borderRadius: '10px',
+    width: '80%',
+  };
   return (
-    <div>
-      <style jsx>
-        {`input {
-          width: 100%;
-          display: block;
-        }`}
-      </style>
+    <div style={formStyle}>
       <form action="">
-        <FormControl>
+        <FormControl fullWidth='true'>
           <InputLabel htmlFor="name">Beer Name</InputLabel>
           <Input id="name" />
           <br/>
         </FormControl>
-        <FormControl>
+        <FormControl fullWidth='true'>
           <InputLabel htmlFor="brand">Brand</InputLabel>
           <Input id="brand" />
           <br/>
         </FormControl>
-        <FormControl>
+        <FormControl fullWidth='true'>
           <InputLabel htmlFor="abv">ABV</InputLabel>
           <Input id="abv" />
           <br/>
         </FormControl>
-        <FormControl>
+        <FormControl fullWidth='true'>
           <InputLabel htmlFor="price">Beer Price</InputLabel>
           <Input id="price" />
           <br/>
         </FormControl>
-        <Button variant="contained" type="submit">SUBMIT</Button>
+        <Button variant="contained" type="submit" fullWidth='true'>SUBMIT</Button>
       </form>
     </div>
   );
