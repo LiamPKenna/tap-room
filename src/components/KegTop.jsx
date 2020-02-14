@@ -12,7 +12,8 @@ function KegTop(props) {
   }
   const kegTopStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 90px'
+    gridTemplateColumns: '1fr 90px',
+    height: '140px'
   };
   const alcoholStyle = {
     textAlign: 'right',

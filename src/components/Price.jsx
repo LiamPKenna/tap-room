@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 function Price(props) {
   const makeMoney = (value) => {
@@ -13,19 +14,30 @@ function Price(props) {
       return '#8fffad';
     }
   }
+  const checkEmp = () => {    
+    if (props.employee) {
+      return (<Button variant="contained" style={btnStyle}>EDIT</Button>)
+    } 
+  }
   const priceStyles = {
+    display: 'grid',
+    gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',
     backgroundColor: colorCode(props.price),
-    textAlign: 'center',
-    padding: '20px'
+    textAlign: 'center'
   };
   const priceTextStyle = {
-    margin: '0',
+    margin: '15px',
   };
+  const btnStyle = {
+    margin: '10px',
+  }
+
   return (
     <div style={priceStyles}>
       <h3 style={priceTextStyle}>
         {`$${makeMoney(props.price)}`}
       </h3>
+      {checkEmp()}
     </div>
   );
 }
