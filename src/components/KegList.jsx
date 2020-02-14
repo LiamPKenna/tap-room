@@ -1,5 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
+import NewKegLink from './NewKegLink';
 import kegs from '../kegs';
 
 function KegList(props) {
@@ -16,6 +17,7 @@ function KegList(props) {
       {kegs.map((keg,index) => 
         (<Keg keg={keg} key={index} employee={props.employee} />)
       )}
+      {(props.employee) ? <NewKegLink /> : ''}
     </div>
   )
 }
