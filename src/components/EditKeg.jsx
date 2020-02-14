@@ -3,6 +3,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
+import kegs from '../kegs';
 
 function EditKeg(props) {
   const formStyle = {
@@ -12,30 +13,32 @@ function EditKeg(props) {
     borderRadius: '10px',
     width: '80%',
   };
+  const keg = kegs[0];
   return (
     <div style={formStyle}>
+      <h1>EDIT</h1>
       <form action="">
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="name">Beer Name</InputLabel>
-          <Input id="name" defaultValue={props.keg.name} />
+          <Input id="name" defaultValue={keg.name} />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="brand">Brand</InputLabel>
-          <Input id="brand" defaultValue={props.keg.brand} />
+          <Input id="brand" defaultValue={keg.brand} />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="abv">ABV</InputLabel>
-          <Input id="abv" defaultValue={props.keg.alcoholContent} />
+          <Input id="abv" defaultValue={keg.alcoholContent} />
           <br/>
         </FormControl>
-        <FormControl fullWidth='true'>
+        <FormControl fullWidth>
           <InputLabel htmlFor="price">Beer Price</InputLabel>
-          <Input id="price" defaultValue={props.keg.price} />
+          <Input id="price" defaultValue={keg.price} />
           <br/>
         </FormControl>
-        <Button variant="contained" type="submit" fullWidth='true'>SUBMIT</Button>
+        <Button variant="contained" type="submit" fullWidth>SUBMIT</Button>
       </form>
     </div>
   );
