@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '@material-ui/core/Icon';
 import { Link } from 'react-router-dom';
 
-function NewKegLink(props) {
+function NewKegLink() {
 
   const kegStyle = {
     border: '2px solid #3d3d3d',
