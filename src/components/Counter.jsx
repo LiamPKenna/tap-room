@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import PropTypes from "prop-types";
 
 function Counter(props) {
   
@@ -34,5 +35,11 @@ function Counter(props) {
     </div>
   );
 }
+
+Counter.propTypes = {
+  employee: PropTypes.bool,
+  pints: PropTypes.number
+};
+
 
 export default Counter;

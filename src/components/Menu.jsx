@@ -1,5 +1,6 @@
 import React from 'react';
 import KegList from './KegList';
+import PropTypes from "prop-types";
 
 function Menu(props) {
   return (
@@ -8,5 +9,9 @@ function Menu(props) {
   );
 
 }
+
+Menu.propTypes = {
+  employee: PropTypes.bool
+};
 
 export default Menu;

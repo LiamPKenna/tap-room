@@ -2,6 +2,7 @@ import React from 'react';
 import Counter from './Counter';
 import Price from './Price';
 import KegTop from './KegTop';
+import PropTypes from "prop-types";
 
 function Keg(props) {
   const checkIfLow = (employee, number) => {
@@ -39,5 +40,10 @@ function Keg(props) {
   );
 
 }
+
+Keg.propTypes = {
+  employee: PropTypes.bool,
+  keg: PropTypes.object
+};
 
 export default Keg;

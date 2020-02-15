@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 function KegTop(props) {
   const colorCode = (value) => {
@@ -39,5 +40,9 @@ function KegTop(props) {
     </div>
   );
 }
+
+KegTop.propTypes = {
+  keg: PropTypes.object
+};
 
 export default KegTop;
