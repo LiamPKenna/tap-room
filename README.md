@@ -8,7 +8,7 @@
 
 _This application was built as part of a larger project and is at this time not completed. Layout and design choices have been made but forms and state management have not yet been integrated. Please check back for future updates._
 
-![Project Layout](public/Project Layout.jpg)
+![Project Layout](https://github.com/LiamPKenna/tap-room/blob/master/public/Project%20Layout.jpg)
 
 ## Setup/Installation Requirements
 
