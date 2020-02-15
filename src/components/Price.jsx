@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 function Price(props) {
   const makeMoney = (value) => {
@@ -52,5 +53,10 @@ function Price(props) {
     </div>
   );
 }
+
+Price.propTypes = {
+  employee: PropTypes.bool,
+  keg: PropTypes.object
+};
 
 export default Price;
