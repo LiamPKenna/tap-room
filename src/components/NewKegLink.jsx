@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 function NewKegLink(props) {
 
   const kegStyle = {
-    width: '40%',
     border: '2px solid #3d3d3d',
     borderRadius: '10px',
     overflow: 'hidden',
@@ -15,9 +14,20 @@ function NewKegLink(props) {
     backgroundColor: '#3d3d3d',
     color: '#fcfcfc',
     minWidth: '325px',
+    maxWidth: '550px'
   };
   return (
-    <Link to="/new_keg" style={kegStyle}>
+    <Link to="/new_keg" className='keg' style={kegStyle}>
+      <style jsx>{`
+        .keg {
+          width: 40%;
+        }
+        @media (max-width: 714px) {
+          .keg {
+            width: 90% !important;
+          }
+        }
+      `}</style>
       <div >
         <h1>Add A New Keg</h1>
         <Icon style={{ fontSize: 75 }}>add_circle</Icon>
