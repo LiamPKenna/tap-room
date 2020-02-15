@@ -16,7 +16,7 @@ function Header() {
   };
   return (
     <div style={headerGrid}>
-      <h1>Top Tap Room</h1>
+      <h1>Tip Top Tap Room</h1>
       <div style={linkDiv}>
         <Link to="/">PATRON</Link> | <Link to="/emp">EMPLOYEE</Link>
       </div>
