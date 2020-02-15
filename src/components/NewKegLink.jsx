@@ -18,7 +18,7 @@ function NewKegLink(props) {
   };
   return (
     <Link to="/new_keg" className='keg' style={kegStyle}>
-      <style jsx>{`
+      <style>{`
         .keg {
           width: 40%;
         }

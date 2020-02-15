@@ -22,7 +22,7 @@ function Keg(props) {
   };
   return (
     <div style={kegStyle} className='keg'>
-            <style jsx>{`
+      <style>{`
         .keg {
           width: 40%;
         }
