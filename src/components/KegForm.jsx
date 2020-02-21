@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 
-function NewKeg(props) {
+function KegForm(props) {
 
   const [name, setName] = useState('');  
   const [brand, setBrand] = useState('');  
   const [abv, setAbv] = useState('');  
   const [price, setPrice] = useState('');  
+
+  useEffect(() => {
+    if (props.keg) {
+      setName(props.keg.name);
+      setBrand(props.keg.brand);
+      setAbv(props.keg.alcoholContent);
+      setPrice(props.keg.price);
+    }
+  }, []);
 
   const formStyle = {
     margin: '40px auto',
@@ -34,6 +43,7 @@ function NewKeg(props) {
     setPrice('');
     props.addKeg(newKeg);  
   }
+  
   return (
     <div style={formStyle}>
       <form onSubmit={constructKeg}>
@@ -59,6 +69,7 @@ function NewKeg(props) {
           <InputLabel htmlFor="abv">ABV</InputLabel>
           <Input 
             id="abv"
+            type="number"
             value={abv} 
             onChange={(e) => setAbv(e.target.value) }
             required />
@@ -68,6 +79,7 @@ function NewKeg(props) {
           <InputLabel htmlFor="price">Beer Price</InputLabel>
           <Input 
             id="price"
+            type="number"
             value={price} 
             onChange={(e) => setPrice(e.target.value) }
             required />
@@ -79,4 +91,4 @@ function NewKeg(props) {
   );
 }
 
-export default NewKeg;
+export default KegForm;
