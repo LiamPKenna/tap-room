@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 
 function NewKeg() {
+
+  const [name, setName] = useState('');  
+
   const formStyle = {
     margin: '40px auto',
     backgroundColor: '#fcfcfc',
@@ -17,7 +20,10 @@ function NewKeg() {
       <form action="">
         <FormControl fullWidth>
           <InputLabel htmlFor="name">Beer Name</InputLabel>
-          <Input id="name" />
+          <Input 
+            id="name" 
+            value={name} 
+            onChange={(e) => setName(e.target.value) } />
           <br/>
         </FormControl>
         <FormControl fullWidth>
