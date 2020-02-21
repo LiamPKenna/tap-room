@@ -36,6 +36,16 @@ class App extends React.Component {
     });
   }
 
+  sellPint = (id) => {
+    this.setState(prevState => {
+      const newKegs = prevState.kegs.map(k => {
+        if (k.id === id) k.pints -= 1;
+        return k;
+      });
+      return { kegs: newKegs }
+    });
+  }
+
   render() {
 
     return (
@@ -46,10 +56,14 @@ class App extends React.Component {
           </header>
           <Switch>
             <Route exact path='/'>
-              <PatronDashboard kegs={this.state.kegs} />
+              <PatronDashboard 
+              kegs={this.state.kegs} 
+              sellPint={this.sellPint} />
             </Route>
             <Route path='/emp'>
-              <EmployeeDashboard kegs={this.state.kegs} />
+              <EmployeeDashboard 
+              kegs={this.state.kegs} 
+              sellPint={this.sellPint} />
             </Route>
             <Route path='/new_keg'>
               <KegForm submitKeg={this.addKeg} />

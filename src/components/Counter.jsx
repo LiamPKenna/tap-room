@@ -6,9 +6,17 @@ function Counter(props) {
   
   const checkEmp = () => {    
     if (props.employee) {
-      return (<Button variant="contained" style={btnStyle}>SELL</Button>)
+      return (
+        <Button 
+          variant="contained" 
+          style={btnStyle}
+          onClick={sell}>SELL</Button>
+      );
     } 
   }
+
+  const sell = () => { props.sellPint(props.id) };
+
   const counterStyle = {
     display: 'grid',
     gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',
