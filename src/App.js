@@ -8,6 +8,7 @@ import KegList from './components/KegList';
 import Header from './components/Header';
 import KegForm from './components/KegForm';
 import kegs from './kegs';
+import { v4 } from 'uuid';
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ class App extends React.Component {
   }
 
   addKeg = (newKeg) => {
-    newKeg.id = this.state.kegs.length;
+    newKeg.id = v4();
     this.setState(prevState => {
       prevState.kegs.push(newKeg);
       return { kegs: prevState.kegs }

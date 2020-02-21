@@ -5,7 +5,7 @@ const kegs = [
     price: 8,
     alcoholContent: 10,
     pints: 124,
-    id: 1
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c1'
   },
   {
     name: 'Warsteiner Premium Verum',
@@ -13,7 +13,7 @@ const kegs = [
     price: 4,
     alcoholContent: 4.8,
     pints: 80,
-    id: 2
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c2'
   },
   {
     name: 'YSB',
@@ -21,7 +21,7 @@ const kegs = [
     price: 5.5,
     alcoholContent: 5.5,
     pints: 5,
-    id: 3
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c3'
   },
   {
     name: 'Pliny the Elder',
@@ -29,7 +29,7 @@ const kegs = [
     price: 6.5,
     alcoholContent: 8,
     pints: 30,
-    id: 4
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c4'
   },
   {
     name: 'Hefeweizen',
@@ -37,7 +37,7 @@ const kegs = [
     price: 5,
     alcoholContent: 6.2,
     pints: 105,
-    id: 5
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c5'
   },
 ];
 

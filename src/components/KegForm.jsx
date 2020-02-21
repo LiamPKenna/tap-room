@@ -14,7 +14,7 @@ function KegForm(props) {
   const [brand, setBrand] = useState('');  
   const [abv, setAbv] = useState('');  
   const [price, setPrice] = useState(''); 
-  const keg = (props.kegs) ? props.kegs.filter(k => k.id === parseInt(id))[0] : null; 
+  const keg = (props.kegs) ? props.kegs.filter(k => k.id === id)[0] : null; 
 
   useEffect(() => {
     if (keg != null) {
