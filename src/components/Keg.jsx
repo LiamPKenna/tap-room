@@ -2,7 +2,7 @@ import React from 'react';
 import Counter from './Counter';
 import Price from './Price';
 import KegTop from './KegTop';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function Keg(props) {
   const checkIfLowBorder = (employee, number) => (
@@ -53,7 +53,8 @@ function Keg(props) {
 
 Keg.propTypes = {
   employee: PropTypes.bool,
-  keg: PropTypes.object
+  keg: PropTypes.object,
+  sellPint: PropTypes.func
 };
 
 export default Keg;
