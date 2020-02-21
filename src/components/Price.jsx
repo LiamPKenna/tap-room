@@ -20,7 +20,7 @@ function Price(props) {
     if (props.employee) {
       return (
         <Link to = {{
-          pathname: "/edit_keg",
+          pathname: `/edit_keg/${props.keg.id}`,
           state: {keg: props.keg}
         }} >
           <div>

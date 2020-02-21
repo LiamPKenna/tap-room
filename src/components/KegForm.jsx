@@ -3,22 +3,26 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
+import { useParams } from  'react-router-dom';
 
 function KegForm(props) {
+
+  const { id } = useParams();
 
   const [name, setName] = useState('');  
   const [brand, setBrand] = useState('');  
   const [abv, setAbv] = useState('');  
-  const [price, setPrice] = useState('');  
+  const [price, setPrice] = useState(''); 
+  const keg = (props.kegs) ? props.kegs.filter(k => k.id === parseInt(id))[0] : null; 
 
   useEffect(() => {
-    if (props.keg) {
-      setName(props.keg.name);
-      setBrand(props.keg.brand);
-      setAbv(props.keg.alcoholContent);
-      setPrice(props.keg.price);
+    if (keg != null) {
+      setName(keg.name);
+      setBrand(keg.brand);
+      setAbv(keg.alcoholContent);
+      setPrice(keg.price);
     }
-  }, []);
+  }, [keg]);
 
   const formStyle = {
     margin: '40px auto',
@@ -37,11 +41,12 @@ function KegForm(props) {
       price: parseFloat(price),
       pints: 124
     };
+    if (props.keg) newKeg.id = keg.id;
     setName('');
     setBrand('');
     setAbv('');
     setPrice('');
-    props.addKeg(newKeg);  
+    props.submitKeg(newKeg);  
   }
   
   return (
