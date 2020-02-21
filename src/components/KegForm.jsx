@@ -3,11 +3,12 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
-import { useParams } from  'react-router-dom';
+import { useHistory, useParams } from  'react-router-dom';
 
 function KegForm(props) {
 
   const { id } = useParams();
+  let history = useHistory();
 
   const [name, setName] = useState('');  
   const [brand, setBrand] = useState('');  
@@ -41,12 +42,13 @@ function KegForm(props) {
       price: parseFloat(price),
       pints: 124
     };
-    if (props.keg) newKeg.id = keg.id;
+    if (keg) newKeg.id = keg.id;
     setName('');
     setBrand('');
     setAbv('');
     setPrice('');
-    props.submitKeg(newKeg);  
+    props.submitKeg(newKeg); 
+    history.push('/emp');
   }
   
   return (
