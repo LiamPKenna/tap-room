@@ -5,15 +5,21 @@ import KegTop from './KegTop';
 import PropTypes from "prop-types";
 
 function Keg(props) {
-  const checkIfLow = (employee, number) => {
-    if (employee && number < 10) {
-      return '2px solid red';
-    } else {
-      return '2px solid #3d3d3d';
-    }
-  }
+  const checkIfLowBorder = (employee, number) => (
+    (employee && number < 10) ? 
+      '2px solid red' : 
+      '2px solid #3d3d3d'
+  );
+
+  const checkIfLowShadow = (employee, number) => (
+    (employee && number < 10) ? 
+      '3px 3px 15px red' : 
+      'none'
+  );
+
   const kegStyle = {
-    border: checkIfLow(props.employee, props.keg.pints),
+    border: checkIfLowBorder(props.employee, props.keg.pints),
+    boxShadow: checkIfLowShadow(props.employee, props.keg.pints),
     borderRadius: '10px',
     overflow: 'hidden',
     margin: '10px',

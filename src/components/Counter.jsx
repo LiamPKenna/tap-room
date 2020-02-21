@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function Counter(props) {
 
   const [percentLeft, setPercentLeft] = useState((props.pints*100)/124);
-  const [bgColor, setBgColor] = useState(`linear-gradient(0deg, rgba(0,0,0,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
+  const [bgColor, setBgColor] = useState(`linear-gradient(0deg, rgba(36,36,36,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
   
   const checkEmp = () => {    
     if (props.employee) {
@@ -21,7 +21,7 @@ function Counter(props) {
   const sell = () => { 
     props.sellPint(props.id);
     setPercentLeft((props.pints*100)/124);
-    setBgColor(`linear-gradient(0deg, rgba(0,0,0,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
+    setBgColor(`linear-gradient(0deg, rgba(36,36,36,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
   }
 
   const counterStyle = {
