@@ -3,7 +3,7 @@ import './App.css';
 import { 
   BrowserRouter as Router,
   Switch,
-  Route } from 'react-router-dom';
+  Route} from 'react-router-dom';
 import EmployeeDashboard from './components/EmployeeDashboard';
 import PatronDashboard from './components/PatronDashboard';
 import Header from './components/Header';
@@ -20,9 +20,19 @@ class App extends React.Component {
   }
 
   addKeg = (newKeg) => {
+    newKeg.id = this.state.kegs.length;
     this.setState(prevState => {
       prevState.kegs.push(newKeg);
       return { kegs: prevState.kegs }
+    });
+  }
+
+  updateKeg = (updatedKeg) => {
+    this.setState(prevState => {
+      const newKegs = prevState.kegs.map(k => 
+        ((k.id === updatedKeg.id) ? updatedKeg : k)
+      );
+      return { kegs: newKegs }
     });
   }
 
@@ -42,10 +52,12 @@ class App extends React.Component {
               <EmployeeDashboard kegs={this.state.kegs} />
             </Route>
             <Route path='/new_keg'>
-              <KegForm addKeg={this.addKeg} />
+              <KegForm submitKeg={this.addKeg} />
             </Route>
-            <Route path='/edit_keg'>
-              <KegForm keg={this.state.kegs[0]} />
+            <Route path='/edit_keg/:id'>
+              <KegForm 
+                submitKeg={this.updateKeg} 
+                kegs={this.state.kegs} />
             </Route>
           </Switch>
         </div>
