@@ -1,7 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
 import NewKegLink from './NewKegLink';
-import kegs from '../kegs';
 import PropTypes from "prop-types";
 
 function KegList(props) {
@@ -15,7 +14,7 @@ function KegList(props) {
   };
   return (
     <div style={listStyle}>
-      {kegs.map((keg,index) => 
+      {props.kegs.map((keg,index) => 
         (<Keg keg={keg} key={index} employee={props.employee} />)
       )}
       {(props.employee) ? <NewKegLink /> : ''}

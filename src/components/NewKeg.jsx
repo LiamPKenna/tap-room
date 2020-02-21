@@ -4,7 +4,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 
-function NewKeg() {
+function NewKeg(props) {
 
   const [name, setName] = useState('');  
   const [brand, setBrand] = useState('');  
@@ -24,14 +24,15 @@ function NewKeg() {
     const newKeg = {
       name: name,
       brand: brand,
-      alcoholContent: abv,
-      price: price
+      alcoholContent: parseFloat(abv),
+      price: parseFloat(price),
+      pints: 124
     };
     setName('');
     setBrand('');
     setAbv('');
     setPrice('');
-    console.log(newKeg);  
+    props.addKeg(newKeg);  
   }
   return (
     <div style={formStyle}>

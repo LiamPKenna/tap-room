@@ -1,10 +1,10 @@
 import React from 'react';
 import Menu from './Menu';
 
-function EmployeeDashboard() {
+function EmployeeDashboard(props) {
   return (
     <div>
-      <Menu employee={false} />
+      <Menu employee={false} kegs={props.kegs} />
     </div>
   );
 }
