@@ -6,7 +6,20 @@
 
 ## Description
 
-_This application was built as part of a larger project and is at this time not completed. Layout and design choices have been made but forms and state management have not yet been integrated. Please check back for future updates._
+_This application was built as a Proof of Concept for a combined inventory management and customer facing display. While not currently connected to a database, infrastructure has been designed to quickly accommodate transition to remote data storage._
+
+_Customer views include:_
+
+* _All available kegs with name and brand information_
+* _Color coded prices_
+* _Color coded alcohol content_
+* _Available pints for a given keg_
+
+_Employee views include:_
+
+* _All of the above_
+* _The ability to add additional kegs_
+* _The ability to edit, delete, and replace kegs_
 
 ![Project Layout](https://github.com/LiamPKenna/tap-room/blob/master/public/Project%20Layout.jpg)
 
@@ -28,7 +41,7 @@ _Any issues or concerns, please email liam@liamkenna.com_
 
 ## Technologies Used
 
-_JavaScript, React, React-Router, Material-UI, HTML, CSS_
+_JavaScript, React, React-Router, Material-UI, HTML, CSS, Yarn, UUID_
 
 ### License
 
