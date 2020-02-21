@@ -15,7 +15,7 @@ function KegList(props) {
   return (
     <div style={listStyle}>
       {props.kegs.map((keg,index) => 
-        (<Keg keg={keg} key={index} employee={props.employee} />)
+        (<Keg keg={keg} key={index} employee={props.employee} sellPint={props.sellPint} />)
       )}
       {(props.employee) ? <NewKegLink /> : ''}
     </div>

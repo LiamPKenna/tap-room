@@ -5,7 +5,10 @@ import PropTypes from "prop-types";
 function Menu(props) {
   return (
 
-    <KegList employee={props.employee} kegs={props.kegs} />
+    <KegList 
+      employee={props.employee} 
+      kegs={props.kegs}
+      sellPint={props.sellPint} />
   );
 
 }

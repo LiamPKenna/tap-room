@@ -34,7 +34,11 @@ function Keg(props) {
         }
       `}</style>
       <KegTop keg={props.keg}/>
-      <Counter pints={props.keg.pints} employee={props.employee} />
+      <Counter 
+        pints={props.keg.pints} 
+        id={props.keg.id} 
+        sellPint={props.sellPint}
+        employee={props.employee} />
       <Price keg={props.keg} employee={props.employee} />
     </div>
   );
