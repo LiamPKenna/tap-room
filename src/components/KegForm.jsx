@@ -56,9 +56,20 @@ function KegForm(props) {
     history.push('/emp');
   }
 
+  const replaceKeg = () => {
+    props.replaceKeg(keg.id);
+    history.push('/emp');
+  }
+
   const checkEdit = () => {
     if (keg) {
-      return <div><br /><Button variant="contained" onClick={deleteKeg} fullWidth>DELETE</Button></div>
+      return (
+        <div>
+          <br />
+          <Button variant="contained" onClick={deleteKeg} fullWidth>DELETE</Button>
+          <br /><br />
+          <Button variant="contained" onClick={replaceKeg} fullWidth>REPLACE</Button>
+        </div>)
     } else {
       return '';
     }

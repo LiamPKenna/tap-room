@@ -43,6 +43,16 @@ class App extends React.Component {
     });
   }
 
+  replaceKeg = (id) => {
+    this.setState(prevState => {
+      const newKegs = prevState.kegs.map(k => {
+        if (k.id === id) k.pints = 124;
+        return k;
+      });
+      return { kegs: newKegs }
+    });
+  }
+
   sellPint = (id) => {
     this.setState(prevState => {
       const newKegs = prevState.kegs.map(k => {
@@ -77,12 +87,14 @@ class App extends React.Component {
             <Route path='/new_keg'>
               <KegForm submitKeg={this.addKeg}
                 deleteKeg={()=>(false)} 
+                replaceKeg={()=>(false)} 
                 kegs={false} />
             </Route>
             <Route path='/edit_keg/:id'>
               <KegForm 
                 submitKeg={this.updateKeg}
                 deleteKeg={this.deleteKeg} 
+                replaceKeg={this.replaceKeg} 
                 kegs={this.state.kegs} />
             </Route>
           </Switch>
