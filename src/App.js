@@ -21,7 +21,7 @@ class App extends React.Component {
     newKeg.id = v4();
     this.setState(prevState => {
       prevState.kegs.push(newKeg);
-      return { kegs: prevState.kegs }
+      return { kegs: prevState.kegs };
     });
   }
 
@@ -30,14 +30,14 @@ class App extends React.Component {
       const newKegs = prevState.kegs.map(k => 
         ((k.id === updatedKeg.id) ? updatedKeg : k)
       );
-      return { kegs: newKegs }
+      return { kegs: newKegs };
     });
   }
 
   deleteKeg = (id) => {
     this.setState(prevState => {
       const newKegs = prevState.kegs.filter(k => (k.id !== id));
-      return { kegs: newKegs }
+      return { kegs: newKegs };
     });
   }
 
@@ -47,7 +47,7 @@ class App extends React.Component {
         if (k.id === id) k.pints = 124;
         return k;
       });
-      return { kegs: newKegs }
+      return { kegs: newKegs };
     });
   }
 
@@ -57,7 +57,7 @@ class App extends React.Component {
         if (k.id === id) k.pints -= 1;
         return k;
       });
-      return { kegs: newKegs }
+      return { kegs: newKegs };
     });
   }
 
@@ -72,15 +72,15 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/'>
               <KegList  
-              employee={false}
-              kegs={this.state.kegs} 
-              sellPint={this.sellPint} />
+                employee={false}
+                kegs={this.state.kegs} 
+                sellPint={this.sellPint} />
             </Route>
             <Route path='/emp'>
               <KegList
-              employee={true} 
-              kegs={this.state.kegs} 
-              sellPint={this.sellPint} />
+                employee={true} 
+                kegs={this.state.kegs} 
+                sellPint={this.sellPint} />
             </Route>
             <Route path='/new_keg'>
               <KegForm submitKeg={this.addKeg}
