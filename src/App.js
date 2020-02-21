@@ -42,7 +42,8 @@ class App extends React.Component {
         if (k.id === id) k.pints -= 1;
         return k;
       });
-      return { kegs: newKegs }
+      const notEmptyKegs = newKegs.filter(k => k.pints > 0);
+      return { kegs: notEmptyKegs }
     });
   }
 
