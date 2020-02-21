@@ -14,10 +14,8 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      kegs: kegs
-    };
-  };
+    this.state = { kegs: kegs };
+  }
 
   addKeg = (newKeg) => {
     newKeg.id = v4();
