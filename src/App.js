@@ -7,8 +7,7 @@ import {
 import EmployeeDashboard from './components/EmployeeDashboard';
 import PatronDashboard from './components/PatronDashboard';
 import Header from './components/Header';
-import NewKeg from './components/NewKeg';
-import EditKeg from './components/EditKeg';
+import KegForm from './components/KegForm';
 import kegs from './kegs';
 
 class App extends React.Component {
@@ -43,10 +42,10 @@ class App extends React.Component {
               <EmployeeDashboard kegs={this.state.kegs} />
             </Route>
             <Route path='/new_keg'>
-              <NewKeg addKeg={this.addKeg} />
+              <KegForm addKeg={this.addKeg} />
             </Route>
             <Route path='/edit_keg'>
-              <EditKeg />
+              <KegForm keg={this.state.kegs[0]} />
             </Route>
           </Switch>
         </div>
