@@ -4,8 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route} from 'react-router-dom';
-import EmployeeDashboard from './components/EmployeeDashboard';
-import PatronDashboard from './components/PatronDashboard';
+import KegList from './components/KegList';
 import Header from './components/Header';
 import KegForm from './components/KegForm';
 import kegs from './kegs';
@@ -56,12 +55,14 @@ class App extends React.Component {
           </header>
           <Switch>
             <Route exact path='/'>
-              <PatronDashboard 
+              <KegList  
+              employee={false}
               kegs={this.state.kegs} 
               sellPint={this.sellPint} />
             </Route>
             <Route path='/emp'>
-              <EmployeeDashboard 
+              <KegList
+              employee={true} 
               kegs={this.state.kegs} 
               sellPint={this.sellPint} />
             </Route>
