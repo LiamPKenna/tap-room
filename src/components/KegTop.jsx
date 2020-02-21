@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function KegTop(props) {
+
   const colorCode = (value) => {
     if (value >= 8) {
       return '#ffaf8f';
@@ -10,7 +11,8 @@ function KegTop(props) {
     } else {
       return '#8fffad';
     }
-  }
+  };
+
   const kegTopStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 90px',
@@ -27,8 +29,9 @@ function KegTop(props) {
     paddingLeft: '20px',
     paddingRight: '20px',
   };
+
   return (
-  <div style={kegTopStyle}>
+    <div style={kegTopStyle}>
       <div style={nameStyle}>
         <h2>{props.keg.name}</h2>
         <h4>{props.keg.brand}</h4>

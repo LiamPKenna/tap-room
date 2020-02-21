@@ -1,7 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 import NewKegLink from './NewKegLink';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function KegList(props) {
   const listStyle = {
@@ -19,11 +19,13 @@ function KegList(props) {
       )}
       {(props.employee) ? <NewKegLink /> : ''}
     </div>
-  )
+  );
 }
 
 KegList.propTypes = {
   employee: PropTypes.bool,
+  sellPint: PropTypes.func,
+  kegs: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default KegList;

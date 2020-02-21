@@ -4,6 +4,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import { useHistory, useParams } from  'react-router-dom';
+import PropTypes from 'prop-types';
 
 function KegForm(props) {
 
@@ -34,7 +35,7 @@ function KegForm(props) {
   };
 
   const constructKeg = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const newKeg = {
       name: name,
       brand: brand,
@@ -49,17 +50,17 @@ function KegForm(props) {
     setPrice('');
     props.submitKeg(newKeg); 
     history.push('/emp');
-  }
+  };
 
   const deleteKeg = () => {
     props.deleteKeg(keg.id);
     history.push('/emp');
-  }
+  };
 
   const replaceKeg = () => {
     props.replaceKeg(keg.id);
     history.push('/emp');
-  }
+  };
 
   const checkEdit = () => {
     if (keg) {
@@ -69,11 +70,11 @@ function KegForm(props) {
           <Button variant="contained" onClick={deleteKeg} fullWidth>DELETE</Button>
           <br /><br />
           <Button variant="contained" onClick={replaceKeg} fullWidth>REPLACE</Button>
-        </div>)
+        </div>);
     } else {
       return '';
     }
-  }
+  };
   
   return (
     <div style={formStyle}>
@@ -122,5 +123,18 @@ function KegForm(props) {
     </div>
   );
 }
+
+KegForm.propTypes = {
+  employee: PropTypes.bool,
+  kegs: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.arrayOf(PropTypes.object)
+  ]),
+  sellPint: PropTypes.func,
+  submitKeg: PropTypes.func,
+  deleteKeg: PropTypes.func,
+  replaceKeg: PropTypes.func
+};
+
 
 export default KegForm;
