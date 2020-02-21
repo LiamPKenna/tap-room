@@ -36,14 +36,20 @@ class App extends React.Component {
     });
   }
 
+  deleteKeg = (id) => {
+    this.setState(prevState => {
+      const newKegs = prevState.kegs.filter(k => (k.id !== id));
+      return { kegs: newKegs }
+    });
+  }
+
   sellPint = (id) => {
     this.setState(prevState => {
       const newKegs = prevState.kegs.map(k => {
         if (k.id === id) k.pints -= 1;
         return k;
       });
-      const notEmptyKegs = newKegs.filter(k => k.pints > 0);
-      return { kegs: notEmptyKegs }
+      return { kegs: newKegs }
     });
   }
 
@@ -69,11 +75,14 @@ class App extends React.Component {
               sellPint={this.sellPint} />
             </Route>
             <Route path='/new_keg'>
-              <KegForm submitKeg={this.addKeg} />
+              <KegForm submitKeg={this.addKeg}
+                deleteKeg={()=>(false)} 
+                kegs={false} />
             </Route>
             <Route path='/edit_keg/:id'>
               <KegForm 
-                submitKeg={this.updateKeg} 
+                submitKeg={this.updateKeg}
+                deleteKeg={this.deleteKeg} 
                 kegs={this.state.kegs} />
             </Route>
           </Switch>

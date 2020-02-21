@@ -50,6 +50,19 @@ function KegForm(props) {
     props.submitKeg(newKeg); 
     history.push('/emp');
   }
+
+  const deleteKeg = () => {
+    props.deleteKeg(keg.id);
+    history.push('/emp');
+  }
+
+  const checkEdit = () => {
+    if (keg) {
+      return <div><br /><Button variant="contained" onClick={deleteKeg} fullWidth>DELETE</Button></div>
+    } else {
+      return '';
+    }
+  }
   
   return (
     <div style={formStyle}>
@@ -94,6 +107,7 @@ function KegForm(props) {
         </FormControl>
         <Button variant="contained" type="submit" fullWidth>SUBMIT</Button>
       </form>
+      {checkEdit()}
     </div>
   );
 }
