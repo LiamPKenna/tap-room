@@ -39,6 +39,22 @@ const kegs = [
     pints: 105,
     id: '55803490-9ff1-4681-9d6c-3e78dd77f0c5'
   },
+  {
+    name: 'Schönramer Pils',
+    brand: 'Schönramer',
+    price: 6.5,
+    alcoholContent: 5.4,
+    pints: 66,
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c6'
+  },
+  {
+    name: 'Special Herbs',
+    brand: 'Upright Brewing',
+    price: 7.25,
+    alcoholContent: 5.7,
+    pints: 79,
+    id: '55803490-9ff1-4681-9d6c-3e78dd77f0c7'
+  },
 ];
 
 export default kegs;

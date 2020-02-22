@@ -11,7 +11,7 @@ function Price(props) {
   const colorCode = (value) => {
     if (value > 7.5) {
       return '#ffaf8f';
-    } else if (value > 5) {
+    } else if (value > 5.5) {
       return '#f4ff8f';
     } else {
       return '#8fffad';
