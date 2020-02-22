@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application was built as a Proof of Concept for a combined inventory management and customer facing display. While not currently connected to a database, infrastructure has been designed to quickly accommodate transition to remote data storage._
+_This application was built as a Proof of Concept for a combined inventory management and customer facing display. The client is a fictional tap room. While not currently connected to a database, the application has been designed to quickly accommodate transition to remote data storage._
 
 _Customer views include:_
 
