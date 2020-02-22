@@ -21,7 +21,7 @@ _Employee views include:_
 * _The ability to add additional kegs_
 * _The ability to edit, delete, and replace kegs_
 
-![Project Layout](https://github.com/LiamPKenna/tap-room/blob/master/public/Project%20Layout.jpg)
+![Project Layout](https://github.com/LiamPKenna/tap-room/blob/master/public/projectLayout.jpg)
 
 ## Setup/Installation Requirements
 
