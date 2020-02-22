@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function NewKegLink() {
 
+  // STYLE OBJECT
   const kegStyle = {
     border: '2px solid #3d3d3d',
     borderRadius: '10px',
@@ -16,6 +17,7 @@ function NewKegLink() {
     minWidth: '325px',
     maxWidth: '550px'
   };
+  
   return (
     <Link to="/new_keg" className='keg' style={kegStyle}>
       <style>{`

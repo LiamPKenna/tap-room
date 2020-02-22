@@ -32,6 +32,7 @@ function Price(props) {
     } 
   };
 
+  // STYLE OBJECTS
   const priceStyles = {
     display: 'grid',
     gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',

@@ -11,12 +11,14 @@ function KegForm(props) {
   const { id } = useParams();
   let history = useHistory();
 
+  // LOCAL STATE
   const [name, setName] = useState('');  
   const [brand, setBrand] = useState('');  
   const [abv, setAbv] = useState('');  
   const [price, setPrice] = useState(''); 
   const keg = (props.kegs) ? props.kegs.filter(k => k.id === id)[0] : null; 
 
+  // SET INITIAL VALUES IF EDITING
   useEffect(() => {
     if (keg != null) {
       setName(keg.name);
@@ -25,15 +27,7 @@ function KegForm(props) {
       setPrice(keg.price);
     }
   }, [keg]);
-
-  const formStyle = {
-    margin: '40px auto',
-    backgroundColor: '#fcfcfc',
-    padding: '30px',
-    borderRadius: '10px',
-    width: '80%',
-  };
-
+  
   const constructKeg = (e) => {
     e.preventDefault();
     const newKeg = {
@@ -51,17 +45,17 @@ function KegForm(props) {
     props.submitKeg(newKeg); 
     history.push('/emp');
   };
-
+  
   const deleteKeg = () => {
     props.deleteKeg(keg.id);
     history.push('/emp');
   };
-
+  
   const replaceKeg = () => {
     props.replaceKeg(keg.id);
     history.push('/emp');
   };
-
+  
   const checkEdit = () => {
     if (keg) {
       return (
@@ -74,6 +68,15 @@ function KegForm(props) {
     } else {
       return '';
     }
+  };
+
+  // STYLE OBJECT
+  const formStyle = {
+    margin: '40px auto',
+    backgroundColor: '#fcfcfc',
+    padding: '30px',
+    borderRadius: '10px',
+    width: '80%',
   };
   
   return (

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 function KegTop(props) {
 
+  // STYLE UTILITY FUNCTION
   const colorCode = (value) => {
     if (value >= 8) {
       return '#ffaf8f';
@@ -13,6 +14,7 @@ function KegTop(props) {
     }
   };
 
+  // STYLE OBJECTS
   const kegTopStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 90px',

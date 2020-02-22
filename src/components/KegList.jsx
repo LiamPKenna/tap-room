@@ -4,6 +4,8 @@ import NewKegLink from './NewKegLink';
 import PropTypes from 'prop-types';
 
 function KegList(props) {
+
+  // STYLE OBJECT
   const listStyle = {
     margin: '20px',
     display: 'flex',
@@ -12,6 +14,7 @@ function KegList(props) {
     marginRight: 'auto',
     justifyContent: 'center'
   };
+  
   return (
     <div style={listStyle}>
       {props.kegs.map((keg,index) => 

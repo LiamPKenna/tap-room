@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+
+  // STYLE OBJECTS
   const linkDivStyle = {
     textAlign: 'center',
     color: '#337ab7',
@@ -21,6 +23,7 @@ function Header() {
     padding: '10px',
     textAlign: 'center'
   };
+  
   return (
     <div style={headerDiv}>
       <h1 style={headerStyle} >Tip Top Tap Room</h1>

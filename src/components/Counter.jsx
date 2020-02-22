@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 function Counter(props) {
 
+  //LOCAL STATE
   const [percentLeft, setPercentLeft] = useState((props.pints*100)/124);
   const [bgColor, setBgColor] = useState(`linear-gradient(0deg, rgba(36,36,36,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
   
@@ -24,6 +25,7 @@ function Counter(props) {
     setBgColor(`linear-gradient(0deg, rgba(36,36,36,1) ${percentLeft}%, rgba(54,54,54,1) ${percentLeft + 6}%, rgba(54,54,54,1) 100%)`);
   };
 
+  // STYLE OBJECTS
   const counterStyle = {
     display: 'grid',
     gridTemplateColumns: (props.employee)? '1fr 1fr' : '1fr',
@@ -32,13 +34,11 @@ function Counter(props) {
     color: 'white',
     border: '2px solid #d1d1d1'
   };
-
   const pintsLeftStyle = {
     height: '50px',
     paddingTop: '30px',
     fontSize: '18px'
   };
-
   const btnStyle = {
     margin: '10px'
   };

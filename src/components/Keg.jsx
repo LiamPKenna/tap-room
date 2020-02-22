@@ -5,18 +5,20 @@ import KegTop from './KegTop';
 import PropTypes from 'prop-types';
 
 function Keg(props) {
+
+  // STYLE UTILITY FUNCTIONS
   const checkIfLowBorder = (employee, number) => (
     (employee && number < 10) ? 
       '2px solid red' : 
       '2px solid #3d3d3d'
   );
-
   const checkIfLowShadow = (employee, number) => (
     (employee && number < 10) ? 
       '3px 3px 15px red' : 
       'none'
   );
 
+  // STYLE OBJECTS
   const kegStyle = {
     border: checkIfLowBorder(props.employee, props.keg.pints),
     boxShadow: checkIfLowShadow(props.employee, props.keg.pints),
@@ -27,6 +29,7 @@ function Keg(props) {
     minWidth: '325px',
     maxWidth: '550px'
   };
+
   return (
     <div style={kegStyle} className='keg'>
       <style>{`
